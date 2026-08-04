@@ -1,0 +1,22 @@
+{
+  "name": "ai-drama-club-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A no-backend landing page for AI short drama audiences using Tally embeds, source tracking, and newsletter-ready signup flows.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest"
+  }
+}

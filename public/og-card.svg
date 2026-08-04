@@ -1,0 +1,12 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#09070C"/>
+  <circle cx="240" cy="86" r="260" fill="#FF4F8B" opacity="0.25"/>
+  <circle cx="1050" cy="100" r="320" fill="#8E5DFF" opacity="0.22"/>
+  <rect x="80" y="76" width="1040" height="478" rx="42" fill="white" fill-opacity="0.07" stroke="white" stroke-opacity="0.15"/>
+  <text x="120" y="184" fill="#F8C572" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="4">AI DRAMA CLUB</text>
+  <text x="120" y="306" fill="#FFF8F4" font-family="Arial, sans-serif" font-size="86" font-weight="800">The story continues</text>
+  <text x="120" y="390" fill="#FFF8F4" font-family="Arial, sans-serif" font-size="86" font-weight="800">before Instagram.</text>
+  <text x="120" y="470" fill="#CAB7C8" font-family="Arial, sans-serif" font-size="34">Early episodes • Plot votes • Alternate endings</text>
+  <path d="M948 136L980 223L1067 255L980 287L948 374L916 287L829 255L916 223L948 136Z" fill="url(#paint0_linear)"/>
+  <defs><linearGradient id="paint0_linear" x1="829" y1="136" x2="1067" y2="374" gradientUnits="userSpaceOnUse"><stop stop-color="#FF4F8B"/><stop offset="1" stop-color="#F8C572"/></linearGradient></defs>
+</svg>
