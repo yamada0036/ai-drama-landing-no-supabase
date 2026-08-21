@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteTitle = "AI Drama Club | Early Access Episodes";
+const siteTitle = "Drama Ads Studio | AI Short Drama Ads";
 const siteDescription =
-  "Get early access to addictive AI short drama episodes, vote for the next twist, and join the Drama Club.";
+  "Premium AI short drama ads for jewelry brands, AI startups, DTC products, creator-led brands, agencies, and MCNs.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com"),
