@@ -14,7 +14,8 @@ declare global {
 
 const FORM_ID = process.env.NEXT_PUBLIC_TALLY_FORM_ID || "";
 const FALLBACK_TALLY_URL = process.env.NEXT_PUBLIC_TALLY_DIRECT_URL || "";
-const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@example.com";
+const CONTACT_EMAIL =
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL || "zqx0310liubo@gmail.com";
 
 function getTrackingParams() {
   if (typeof window === "undefined") return new URLSearchParams();
@@ -30,17 +31,13 @@ function getTrackingParams() {
 
   params.set("page_url", window.location.href);
   params.set("landing_path", window.location.pathname);
-
-  if (!params.get("source")) {
-    params.set("source", params.get("utm_source") || "direct");
-  }
+  if (!params.get("source")) params.set("source", params.get("utm_source") || "direct");
 
   return params;
 }
 
 function buildTallySrc() {
-  const base = FORM_ID ? `https://tally.so/embed/${FORM_ID}` : FALLBACK_TALLY_URL || "";
-
+  const base = FORM_ID ? `https://tally.so/embed/${FORM_ID}` : FALLBACK_TALLY_URL;
   if (!base) return "";
 
   const url = new URL(base);
@@ -49,9 +46,7 @@ function buildTallySrc() {
   url.searchParams.set("transparentBackground", "1");
   url.searchParams.set("dynamicHeight", "1");
 
-  const tracking = getTrackingParams();
-  tracking.forEach((value, key) => url.searchParams.set(key, value));
-
+  getTrackingParams().forEach((value, key) => url.searchParams.set(key, value));
   return url.toString();
 }
 
@@ -67,33 +62,30 @@ export default function ContactForm() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const body = [
-      "Free 15-sec drama concept request",
+      "Paid AI microdrama pilot enquiry",
       "",
       `Name: ${data.get("name")}`,
       `Email: ${data.get("email")}`,
       `Brand website: ${data.get("brandWebsite")}`,
       `Product: ${data.get("product")}`,
       `Platform: ${data.get("platform")}`,
+      `Project brief: ${data.get("brief")}`,
       "",
       `Source: ${typeof window !== "undefined" ? window.location.href : "direct"}`
     ].join("\n");
 
     const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-      "Free 15-sec drama concept request"
+      "Paid AI microdrama pilot enquiry"
     )}&body=${encodeURIComponent(body)}`;
 
-    setMessage("Opening your email client with the concept request.");
+    setMessage("Opening your email app with the project details.");
     window.location.href = mailto;
   }
 
   return (
     <div className="lead-form">
-      <div className="form-eyebrow">Free concept request</div>
-      <h2>Tell us what should be inside the scene.</h2>
-      <p className="form-copy">
-        Share the product and platform. The reply will focus on story, retention, product placement,
-        and the first test angle.
-      </p>
+      <p className="form-label">Project enquiry</p>
+      <h3>Start with one scene.</h3>
 
       {tallySrc ? (
         <div className="tally-card">
@@ -105,7 +97,7 @@ export default function ContactForm() {
             frameBorder="0"
             marginHeight={0}
             marginWidth={0}
-            title="AI short drama ads contact form"
+            title="AI microdrama project enquiry"
             className="tally-iframe"
           />
           <Script
@@ -121,7 +113,7 @@ export default function ContactForm() {
             <input name="name" type="text" autoComplete="name" required />
           </label>
           <label>
-            Email
+            Work email
             <input name="email" type="email" autoComplete="email" required />
           </label>
           <label>
@@ -130,10 +122,10 @@ export default function ContactForm() {
           </label>
           <label>
             Product
-            <input name="product" type="text" placeholder="Ring, AI tool, launch offer..." required />
+            <input name="product" type="text" placeholder="Jewellery, beauty, app, AI tool…" required />
           </label>
           <label>
-            Platform
+            Target platform
             <select name="platform" required defaultValue="">
               <option value="" disabled>
                 Choose platform
@@ -145,10 +137,19 @@ export default function ContactForm() {
               <option>Not sure yet</option>
             </select>
           </label>
-          <button className="primary-button form-button" type="submit">
-            Get a free 15-sec drama concept
+          <label>
+            Project brief
+            <textarea
+              name="brief"
+              rows={4}
+              placeholder="What should the audience feel, remember or do?"
+              required
+            />
+          </label>
+          <button className="submit-button" type="submit">
+            Send project enquiry <span aria-hidden="true">↗</span>
           </button>
-          <p className="form-message">{message || "No backend is required. Add Tally env vars for live capture."}</p>
+          <p className="form-message">{message || "You will receive a reply by email."}</p>
         </form>
       )}
     </div>

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteTitle = "Drama Ads Studio | AI Short Drama Ads";
+const siteTitle = "Drama Ads Studio | Cinematic AI Microdramas";
 const siteDescription =
-  "Premium AI short drama ads for jewelry brands, AI startups, DTC products, creator-led brands, agencies, and MCNs.";
+  "Story-led AI microdramas and vertical brand films for jewellery, beauty, romance apps and AI products.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://ai-drama-landing-no-supabase.vercel.app"),
   title: siteTitle,
   description: siteDescription,
   openGraph: {

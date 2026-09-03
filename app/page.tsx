@@ -1,312 +1,231 @@
 import Image from "next/image";
 import ContactForm from "./components/TallyEmbed";
 
-const sampleDramaUrl = process.env.NEXT_PUBLIC_SAMPLE_DRAMAS_URL || "#proof";
+const instagramUrl =
+  process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/yamada03106/";
 
-const proofMetrics = [
+const selectedWorks = [
   {
-    platform: "Instagram Reels",
-    metric: "1.8M",
-    label: "short drama views",
-    note: "Jewelry reveal framed as the final twist, not a product shot."
+    number: "01",
+    category: "Corporate revenge · Microdrama",
+    title: "The Divorced Heiress",
+    description:
+      "He thought the divorce left her with nothing. The board knew otherwise.",
+    href: "https://www.instagram.com/yamada03106/reel/DcJOEHoBbq6/"
   },
   {
-    platform: "YouTube Shorts",
-    metric: "42%",
-    label: "average hold past 10s",
-    note: "Cold open built around conflict before the product appears."
+    number: "02",
+    category: "Power reversal · Episodic story",
+    title: "The Trap Was Already Set",
+    description:
+      "He fired his mistress to save himself. The heiress had already planned the final move.",
+    href: "https://www.instagram.com/yamada03106/reel/Dba5HeLB7rS/"
   },
   {
-    platform: "Instagram Reels",
-    metric: "3.6x",
-    label: "more saves than product-only cuts",
-    note: "Story-led captions turned curiosity into repeat watches."
+    number: "03",
+    category: "Product integration · Vertical film",
+    title: "The Ring Reveal",
+    description:
+      "Jewellery enters at the emotional turn, as part of the story rather than a product cutaway.",
+    href: instagramUrl
   }
 ];
 
 const services = [
   {
-    title: "Starter Drama Concept",
-    price: "For first tests",
-    description:
-      "A 15-second story angle, hook, shot list, product placement note, and caption direction for one product or launch.",
-    items: ["1 drama concept", "Hook and beat sheet", "Product placement plan", "CTA and caption direction"]
+    number: "I",
+    title: "Brand microdramas",
+    copy: "Story-led 10–30 second vertical films, from first hook to final reveal."
   },
   {
-    title: "Drama Reel Production",
-    price: "For campaign assets",
-    description:
-      "A finished vertical drama ad built for paid or organic testing, from concept through edit-ready delivery.",
-    items: ["Script and scene plan", "AI-assisted production", "9:16 final reel", "Thumbnail and caption options"]
+    number: "II",
+    title: "Product integration",
+    copy: "Jewellery, beauty and digital products written naturally into the scene."
   },
   {
-    title: "Monthly Drama Ads",
-    price: "For ongoing growth",
-    description:
-      "A repeatable short-drama pipeline for brands that need new angles, new hooks, and faster creative testing.",
-    items: ["4-8 concepts monthly", "2-4 produced reels", "Performance review", "Iteration roadmap"]
-  }
-];
-
-const industries = [
-  "Jewelry brands",
-  "AI tools",
-  "DTC products",
-  "Creator-led brands",
-  "Agencies and MCNs"
-];
-
-const workflow = [
-  "Send product",
-  "Receive concepts",
-  "Choose angle",
-  "Produce reel",
-  "Test and iterate"
-];
-
-const faqs = [
-  {
-    question: "Do you only work with jewelry brands?",
-    answer:
-      "Jewelry is the sharpest fit because drama makes desire and gifting tension easy to show. I also work with AI tools, DTC products, creator-led brands, agencies, and MCNs."
+    number: "III",
+    title: "Paid-social creatives",
+    copy: "Alternative hooks, captions and edits prepared for creative testing."
   },
   {
-    question: "What makes this different from a normal UGC ad?",
-    answer:
-      "The ad is built like a short scene first: conflict, reveal, product placement, and a reason to keep watching. The product matters because the story makes it matter."
-  },
-  {
-    question: "Can we use the reels for paid ads?",
-    answer:
-      "Yes. Concepts and deliverables can be planned for organic testing, paid creative testing, or both, depending on your platform and usage needs."
-  },
-  {
-    question: "What do you need from us?",
-    answer:
-      "A product link, brand site, target platform, current creative examples, and any claims or compliance boundaries the reel must respect."
-  }
-];
-
-const videoCards = [
-  {
-    label: "Jewelry reveal",
-    title: "She left the ring on the table. Then the message arrived.",
-    metric: "68% watched to reveal",
-    tone: "Luxury tension"
-  },
-  {
-    label: "AI tool demo",
-    title: "He missed the deadline. His assistant had one hidden move.",
-    metric: "31% click lift",
-    tone: "Workplace twist"
-  },
-  {
-    label: "DTC product",
-    title: "Everyone ignored the gift until the receipt changed hands.",
-    metric: "2.4x saves",
-    tone: "Social proof"
+    number: "IV",
+    title: "Recurring story campaigns",
+    copy: "Connected episodes, recurring characters and product-led story worlds."
   }
 ];
 
 export default function Home() {
   return (
     <main>
-      <section className="hero" id="top">
-        <div className="section-shell">
-          <nav className="nav-bar" aria-label="Main navigation">
-            <a className="brand" href="#top" aria-label="Drama Ads Studio home">
-              <span className="brand-mark">DA</span>
-              <span>Drama Ads Studio</span>
+      <header className="site-header" id="top">
+        <a className="wordmark" href="#top" aria-label="Drama Ads Studio home">
+          Drama Ads Studio
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Enquire</a>
+        </nav>
+      </header>
+
+      <section className="hero section-shell">
+        <div className="hero-heading">
+          <p className="kicker">Cinematic AI production · Worldwide</p>
+          <h1>
+            Your product,
+            <br />
+            <em>written into</em>
+            <br />
+            the story.
+          </h1>
+        </div>
+
+        <figure className="hero-frame">
+          <Image
+            src="/drama-jewelry-hero.png"
+            alt="Cinematic AI microdrama scene featuring a jewellery reveal"
+            width={941}
+            height={1672}
+            priority
+          />
+          <figcaption>
+            <span>Story-first vertical films</span>
+            <span>10–30 seconds</span>
+          </figcaption>
+        </figure>
+
+        <div className="hero-intro">
+          <p>
+            AI microdramas for jewellery, beauty, romance apps and AI products—directed from
+            concept to final vertical cut.
+          </p>
+          <div className="hero-links">
+            <a className="text-link" href="#work">
+              View selected work <span aria-hidden="true">↘</span>
             </a>
-            <div className="nav-links">
-              <a href="#services">Services</a>
-              <a href="#proof">Proof</a>
-              <a href="#contact">Contact</a>
-            </div>
-          </nav>
-
-          <div className="hero-grid">
-            <div className="hero-copy">
-              <p className="eyebrow">AI short drama ads for jewelry brands and AI startups</p>
-              <h1>Turn product moments into short dramas people finish.</h1>
-              <p className="hero-subtitle">
-                We create cinematic 9:16 story ads that place your product inside tension, desire, and
-                payoff, so the audience stays for the scene before they notice the sell.
-              </p>
-              <div className="hero-actions">
-                <a className="primary-button" href="#contact">
-                  Get a free 15-sec drama concept
-                </a>
-                <a className="secondary-button" href={sampleDramaUrl}>
-                  See sample dramas
-                </a>
-              </div>
-              <div className="proof-row" aria-label="Creative focus">
-                <span>Story-first hooks</span>
-                <span>Natural product placement</span>
-                <span>Built for retention</span>
-              </div>
-            </div>
-
-            <div className="preview-stack" aria-label="Vertical video preview cards">
-              <article className="video-preview hero-preview">
-                <Image
-                  src="/drama-jewelry-hero.png"
-                  alt="Cinematic jewelry short drama preview"
-                  width={941}
-                  height={1672}
-                  priority
-                />
-                <div className="preview-overlay">
-                  <span>Scene 01</span>
-                  <h2>The necklace was never the gift. It was the proof.</h2>
-                  <p>15s drama concept</p>
-                </div>
-              </article>
-              <article className="floating-preview">
-                <span>Retention cue</span>
-                <strong>Reveal at 0:11</strong>
-              </article>
-            </div>
+            <a className="text-link" href="#contact">
+              Start a project <span aria-hidden="true">↘</span>
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="problem-band">
-        <div className="section-shell problem-grid">
-          <p className="eyebrow">The shift</p>
-          <h2>Nobody wants another ad. Everyone stays for drama.</h2>
-          <p>
-            Product-first creative asks for attention too early. Short drama earns it with a question,
-            holds it with tension, then gives the product a reason to appear.
-          </p>
+      <section className="statement-band">
+        <div className="section-shell statement-grid">
+          <p className="section-index">The approach</p>
+          <h2>The product is not interrupted by the story. It becomes the reason the story turns.</h2>
         </div>
       </section>
 
-      <section className="section-shell proof-section" id="proof">
-        <div className="section-heading">
-          <p className="eyebrow">Performance signals</p>
-          <h2>Short drama gives your media buyer more hooks to test.</h2>
-          <p>
-            Use drama angles to test open loops, reveals, emotional stakes, and product placement
-            timing across Instagram Reels and YouTube Shorts.
-          </p>
+      <section className="work-section section-shell" id="work">
+        <div className="section-title-row">
+          <p className="section-index">Selected work</p>
+          <p>Stories built for the vertical screen.</p>
         </div>
-        <div className="metrics-grid">
-          {proofMetrics.map((item) => (
-            <article className="metric-card" key={item.metric}>
-              <p>{item.platform}</p>
-              <strong>{item.metric}</strong>
-              <h3>{item.label}</h3>
-              <span>{item.note}</span>
-            </article>
-          ))}
-        </div>
-      </section>
 
-      <section className="section-shell sample-section" aria-label="Sample drama angles">
-        <div className="sample-grid">
-          {videoCards.map((card, index) => (
-            <article className={`sample-card sample-${index + 1}`} key={card.label}>
-              <div className="sample-topline">
-                <span>{card.label}</span>
-                <span>{card.metric}</span>
-              </div>
+        <div className="work-list">
+          {selectedWorks.map((work) => (
+            <a
+              className="work-row"
+              href={work.href}
+              target="_blank"
+              rel="noreferrer"
+              key={work.number}
+            >
+              <span className="work-number">{work.number}</span>
               <div>
-                <p>{card.tone}</p>
-                <h3>{card.title}</h3>
+                <p>{work.category}</p>
+                <h3>{work.title}</h3>
               </div>
+              <p className="work-description">{work.description}</p>
+              <span className="work-arrow" aria-hidden="true">
+                ↗
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="proof-band" aria-label="Audience and performance">
+        <div className="section-shell proof-grid">
+          <article>
+            <strong>166,449</strong>
+            <span>views on one Reel</span>
+          </article>
+          <article>
+            <strong>1,271</strong>
+            <span>followers from that story</span>
+          </article>
+          <article>
+            <strong>14s</strong>
+            <span>average watch time</span>
+          </article>
+          <article>
+            <strong>US-led</strong>
+            <span>international audience</span>
+          </article>
+        </div>
+      </section>
+
+      <section className="services-section section-shell" id="services">
+        <div className="services-intro">
+          <p className="section-index">In the studio</p>
+          <h2>One creative partner, from the first line to the final frame.</h2>
+        </div>
+
+        <div className="service-list">
+          {services.map((service) => (
+            <article className="service-row" key={service.number}>
+              <span>{service.number}</span>
+              <h3>{service.title}</h3>
+              <p>{service.copy}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="services-band" id="services">
-        <div className="section-shell">
-          <div className="section-heading">
-            <p className="eyebrow">Services</p>
-            <h2>Pick the level of drama your launch needs.</h2>
-          </div>
-          <div className="service-grid">
-            {services.map((service) => (
-              <article className="service-card" key={service.title}>
-                <p>{service.price}</p>
-                <h3>{service.title}</h3>
-                <span>{service.description}</span>
-                <ul>
-                  {service.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-shell industries-section">
-        <div className="section-heading compact-heading">
-          <p className="eyebrow">Built for</p>
-          <h2>Brands where the product needs a reason to be desired.</h2>
-        </div>
-        <div className="industry-grid">
-          {industries.map((industry) => (
-            <article className="industry-card" key={industry}>
-              {industry}
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="workflow-band">
-        <div className="section-shell">
-          <div className="section-heading">
-            <p className="eyebrow">Workflow</p>
-            <h2>From product link to testable reel.</h2>
-          </div>
-          <div className="workflow-grid">
-            {workflow.map((step, index) => (
-              <article className="workflow-step" key={step}>
-                <span>0{index + 1}</span>
-                <h3>{step}</h3>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-shell faq-section">
-        <div className="section-heading compact-heading">
-          <p className="eyebrow">FAQ</p>
-          <h2>What brands usually ask before the first concept.</h2>
-        </div>
-        <div className="faq-list">
-          {faqs.map((faq) => (
-            <details key={faq.question}>
-              <summary>{faq.question}</summary>
-              <p>{faq.answer}</p>
-            </details>
-          ))}
-        </div>
-      </section>
-
-      <section className="contact-band" id="contact">
-        <div className="section-shell contact-grid">
+      <section className="founder-band">
+        <div className="section-shell founder-grid">
+          <p className="section-index">A note from the creator</p>
           <div>
-            <p className="eyebrow">Start with one scene</p>
-            <h2>Get a free 15-sec drama concept for your product.</h2>
+            <h2>Character, tension and a reason to keep watching.</h2>
             <p>
-              Send the product, platform, and brand site. You will get one short-form drama angle with
-              the hook, emotional beat, product placement, and CTA direction.
+              I develop the story, direct the AI production, maintain character continuity, edit
+              each scene, add captions and prepare the final vertical cut. The person you brief is
+              the person who delivers.
             </p>
+            <p>
+              The work is designed for brands that want more than another product demonstration:
+              a scene with an open loop, an emotional turn and a product that belongs inside it.
+            </p>
+            <p className="signature">— Bo Liu, Creator &amp; Director</p>
           </div>
-          <ContactForm />
         </div>
       </section>
 
-      <footer className="footer section-shell">
-        <p>(c) {new Date().getFullYear()} Drama Ads Studio. Short drama creative for products that need story.</p>
-        <a href="#contact">Get a free concept</a>
+      <section className="contact-section section-shell" id="contact">
+        <div className="contact-copy">
+          <p className="section-index">Enquiries</p>
+          <h2>Tell me what your product needs to say.</h2>
+          <p>
+            Share your product, audience and target platform. Small paid pilots are available for
+            the first collaboration.
+          </p>
+          <a className="email-link" href="mailto:zqx0310liubo@gmail.com">
+            zqx0310liubo@gmail.com
+          </a>
+        </div>
+        <ContactForm />
+      </section>
+
+      <footer className="site-footer section-shell">
+        <p>© {new Date().getFullYear()} Drama Ads Studio</p>
+        <div>
+          <a href={instagramUrl} target="_blank" rel="noreferrer">
+            Instagram
+          </a>
+          <a href="mailto:zqx0310liubo@gmail.com">Email</a>
+        </div>
       </footer>
     </main>
   );
