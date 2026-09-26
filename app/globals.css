@@ -39,8 +39,8 @@ h3 { margin: 0 0 8px; }
 .grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
 .card { background: var(--panel); border: 1px solid var(--line); border-radius: 22px; padding: 22px; }
 .card p { color: var(--muted); margin-bottom: 0; }
-.video-placeholder { aspect-ratio: 9/16; border-radius: 18px; background: linear-gradient(160deg,#17181b,#282a2f); display: flex; align-items: center; justify-content: center; color: #c7cbd1; border: 1px solid var(--line); margin-bottom: 16px; text-align: center; padding: 20px; }
 .kicker { font-size: 14px; color: var(--accent); font-weight: 700; }
+.case-image { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; border-radius: 18px; border: 1px solid var(--line); margin-bottom: 18px; background:#0d0e10; }
 .two-col { display: grid; grid-template-columns: 1.05fr .95fr; gap: 34px; align-items: start; }
 ul.clean { padding-left: 20px; color: var(--muted); }
 .cta { background: #131416; border: 1px solid var(--line); border-radius: 26px; padding: 36px; }
@@ -49,36 +49,9 @@ input, textarea, select { width: 100%; background: #0f1012; color: var(--text); 
 textarea { min-height: 140px; resize: vertical; }
 .footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
 .badge { display: inline-block; padding: 7px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 13px; margin: 4px 6px 0 0; }
+form a { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 800px) {
   .grid, .two-col { grid-template-columns: 1fr; }
   .nav-links { display: none; }
   .hero { padding-top: 68px; }
 }
-
-.case-visual {
-  aspect-ratio: 9/11;
-  border-radius: 18px;
-  background:
-    radial-gradient(circle at 70% 22%, rgba(244,200,74,.16), transparent 26%),
-    linear-gradient(145deg,#18191c,#0d0e10 68%);
-  border: 1px solid var(--line);
-  padding: 18px;
-  margin-bottom: 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-}
-.case-number {
-  font-size: 13px;
-  letter-spacing: .14em;
-  color: var(--muted);
-}
-.case-hook {
-  max-width: 220px;
-  font-size: clamp(24px,3vw,36px);
-  font-weight: 800;
-  line-height: 1.02;
-  letter-spacing: -.035em;
-}
-form a { text-decoration: underline; text-underline-offset: 3px; }

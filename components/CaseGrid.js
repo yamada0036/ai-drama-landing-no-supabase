@@ -3,29 +3,29 @@ const cases = [
     tag:'JEWELRY',
     title:'Luxury Necklace Reveal',
     desc:'A relationship confrontation becomes a status-reversal reveal, with the necklace acting as the evidence that changes the scene.',
-    hook:'The product is the proof.'
+    image:'/examples/necklace.webp',
+    alt:'Luxury necklace reveal in a cinematic AI drama ad'
   },
   {
     tag:'WATCHES',
     title:'Watch Collection Twist',
     desc:'The watch is introduced as part of the conflict, then becomes the payoff: exclusivity, ownership and status are revealed through the product.',
-    hook:'The product is the reveal.'
+    image:'/examples/watch.webp',
+    alt:'Luxury wristwatch reveal in a cinematic AI drama ad'
   },
   {
     tag:'FASHION & ACCESSORIES',
-    title:'Ring / Bag Plot Integration',
-    desc:'A ring or handbag is written directly into the argument, giving viewers a reason to stay until the final product-driven reversal.',
-    hook:'The product is the plot twist.'
+    title:'Ring Plot Integration',
+    desc:'The ring becomes the visual payoff of the story, turning the product reveal into the final plot twist.',
+    image:'/examples/ring.webp',
+    alt:'Blue gemstone ring plot twist in a cinematic AI drama ad'
   }
 ];
 
 export default function CaseGrid(){
   return <div className="grid">
-    {cases.map((c,i)=><article className="card" key={c.title}>
-      <div className="case-visual">
-        <span className="case-number">0{i+1}</span>
-        <span className="case-hook">{c.hook}</span>
-      </div>
+    {cases.map((c)=><article className="card" key={c.title}>
+      <img className="case-image" src={c.image} alt={c.alt} loading="lazy" />
       <div className="kicker">{c.tag}</div>
       <h3>{c.title}</h3>
       <p>{c.desc}</p>
