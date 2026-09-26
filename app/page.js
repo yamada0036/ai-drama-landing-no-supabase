@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import CaseGrid from '../components/CaseGrid';
+import SampleVideo from '../components/SampleVideo';
 
 export const metadata = {
   title: 'AI Video Ads for Brands',
@@ -14,14 +15,20 @@ export const metadata = {
 
 export default function Home(){
  return <main>
-  <section className="hero"><div className="container">
-   <div className="eyebrow">AI video advertising · story-driven creative</div>
-   <h1>AI Video Ads for Brands That People Want to Keep Watching.</h1>
-   <p className="lead">We create cinematic AI video ads for ecommerce, jewelry, fashion and lifestyle brands — built for TikTok, Instagram Reels and YouTube Shorts.</p>
-   <div className="actions">
-     <Link className="btn primary" href="/contact">Get 3 Free Story Ideas</Link>
-     <Link className="btn secondary" href="/examples">See Examples</Link>
+  <section className="hero"><div className="container hero-showcase">
+   <div>
+     <div className="eyebrow">AI video advertising · story-driven creative</div>
+     <h1>AI Video Ads for Brands That People Want to Keep Watching.</h1>
+     <p className="lead">We create cinematic AI video ads for ecommerce, jewelry, fashion and lifestyle brands — built for TikTok, Instagram Reels and YouTube Shorts.</p>
+     <div className="actions">
+       <Link className="btn primary" href="/contact">Get 3 Free Story Ideas</Link>
+       <Link className="btn secondary" href="/examples">Watch All 3 Examples</Link>
+     </div>
    </div>
+   <figure className="featured-sample">
+     <SampleVideo src="/videos/ring-story.mp4" poster="/videos/ring-story.webp" title="Play The Ring Reveal, a 20-second AI drama spec concept" className="featured-video" />
+     <figcaption>Featured spec concept · The Ring Reveal · 20 sec</figcaption>
+   </figure>
   </div></section>
 
   <section className="section"><div className="container two-col">
@@ -35,7 +42,12 @@ export default function Home(){
     </div>
   </div></section>
 
-  <section className="section"><div className="container"><CaseGrid /></div></section>
+  <section className="section"><div className="container">
+    <div className="eyebrow">The work, in motion</div>
+    <h2>Watch three short drama concepts.</h2>
+    <p className="lead">20-second vertical stories with a hook, a turn and a reveal.</p>
+    <CaseGrid />
+  </div></section>
 
   <section className="section"><div className="container two-col">
     <div><div className="eyebrow">How it works</div><h2>From one product to three story concepts.</h2></div>
