@@ -1,2 +1,28 @@
-export const metadata = { title:'Contact', description:'Send your product and get three AI drama ad concepts.' };
-export default function Page(){return <main><section className="hero"><div className="container two-col"><div><div className="eyebrow">Free concept offer</div><h1>Get 3 Free Drama Concepts.</h1><p className="lead">Send your product, audience and platform. We’ll turn it into three short-drama ad directions.</p></div><div className="card"><form action="mailto:hello@example.com" method="post" encType="text/plain"><input name="name" placeholder="Your name" required/><input name="email" type="email" placeholder="Work email" required/><input name="brand" placeholder="Brand / product URL"/><select name="category" defaultValue=""><option value="" disabled>Product category</option><option>Jewelry</option><option>Watches</option><option>Fashion</option><option>Beauty</option><option>Ecommerce</option><option>Other</option></select><textarea name="brief" placeholder="What product do you want to feature?"/><button className="btn primary" type="submit">Send My Product</button></form></div></div></section></main>}
+import ContactForm from '../../components/ContactForm';
+
+export const metadata = {
+  title:'Contact',
+  description:'Send your product and get three AI drama ad concepts from Moon Ocean Studio.'
+};
+
+export default function Page(){
+  return <main>
+    <section className="hero">
+      <div className="container two-col">
+        <div>
+          <div className="eyebrow">Free concept offer</div>
+          <h1>Get 3 Free Drama Concepts.</h1>
+          <p className="lead">Send your product, audience and platform. We’ll turn it into three short-drama ad directions built for TikTok, Instagram Reels or YouTube Shorts.</p>
+          <div style={{marginTop:24}}>
+            <span className="badge">No long brief required</span>
+            <span className="badge">Product-first concepts</span>
+            <span className="badge">Short-form ready</span>
+          </div>
+        </div>
+        <div className="card">
+          <ContactForm />
+        </div>
+      </div>
+    </section>
+  </main>
+}

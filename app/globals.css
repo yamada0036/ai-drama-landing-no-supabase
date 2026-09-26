@@ -54,3 +54,31 @@ textarea { min-height: 140px; resize: vertical; }
   .nav-links { display: none; }
   .hero { padding-top: 68px; }
 }
+
+.case-visual {
+  aspect-ratio: 9/11;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 70% 22%, rgba(244,200,74,.16), transparent 26%),
+    linear-gradient(145deg,#18191c,#0d0e10 68%);
+  border: 1px solid var(--line);
+  padding: 18px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.case-number {
+  font-size: 13px;
+  letter-spacing: .14em;
+  color: var(--muted);
+}
+.case-hook {
+  max-width: 220px;
+  font-size: clamp(24px,3vw,36px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+form a { text-decoration: underline; text-underline-offset: 3px; }
