@@ -1,0 +1,3 @@
+import CaseGrid from '../../components/CaseGrid';
+export const metadata = { title:'AI Drama Ad Examples', description:'Examples of story-driven AI product ads and branded short drama concepts.' };
+export default function Page(){return <main><section className="hero"><div className="container"><div className="eyebrow">Portfolio</div><h1>AI Drama Ad Examples</h1><p className="lead">Replace these placeholders with your existing necklace, watch, ring and handbag vertical videos before launch.</p></div></section><section className="section"><div className="container"><CaseGrid /></div></section></main>}
