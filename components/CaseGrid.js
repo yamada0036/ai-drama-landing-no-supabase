@@ -3,7 +3,7 @@ const cases = [
     tag:'JEWELRY',
     title:'Luxury Necklace Reveal',
     desc:'A relationship confrontation becomes a status-reversal reveal, with the necklace acting as the evidence that changes the scene.',
-    image:'/examples/necklace.webp',
+    image:'/examples/necklace.jpg',
     alt:'Luxury necklace reveal in a cinematic AI drama ad'
   },
   {
