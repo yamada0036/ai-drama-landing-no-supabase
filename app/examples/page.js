@@ -2,7 +2,8 @@ import CaseGrid from '../../components/CaseGrid';
 
 export const metadata = {
   title:'AI Drama Ad Examples',
-  description:'Story-driven AI product ad concepts for jewelry, watches, fashion and ecommerce brands.'
+  description:'Story-driven AI product ad concepts for jewelry, watches, fashion and ecommerce brands.',
+  alternates:{ canonical:'/examples' }
 };
 
 export default function Page(){

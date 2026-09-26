@@ -2,7 +2,8 @@ import ContactForm from '../../components/ContactForm';
 
 export const metadata = {
   title:'Contact',
-  description:'Send your product and get three AI drama ad concepts from Moon Ocean Studio.'
+  description:'Send your product and get three AI drama ad concepts from Moon Ocean Studio.',
+  alternates:{ canonical:'/contact' }
 };
 
 export default function Page(){

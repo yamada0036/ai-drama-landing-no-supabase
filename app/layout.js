@@ -4,7 +4,6 @@ import Footer from '../components/Footer';
 
 export const metadata = {
   metadataBase: new URL('https://ai-drama-landing-no-supabase.vercel.app'),
-  alternates: { canonical: '/' },
   title: { default: 'AI Drama Ads for Brands | Moon Ocean Studio', template: '%s | Moon Ocean Studio' },
   description: 'Story-driven AI video ads and branded short dramas for ecommerce, jewelry, fashion and lifestyle brands.',
   openGraph: {

@@ -1,5 +1,10 @@
 import Link from 'next/link';
 import CaseGrid from '../components/CaseGrid';
+
+export const metadata = {
+  alternates: { canonical: '/' }
+};
+
 export default function Home(){
  return <main>
   <section className="hero"><div className="container">
