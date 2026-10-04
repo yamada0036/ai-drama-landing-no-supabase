@@ -1,9 +1,25 @@
 import Link from 'next/link';
+import BuyerFAQ from '../../components/BuyerFAQ';
 
 export const metadata = {
-  title:'Branded Short Drama',
-  description:'Branded short drama production for ecommerce and consumer brands using story-first product integration.',
-  alternates:{ canonical:'/branded-short-drama' }
+  title: 'Branded Short Drama Series & Product Integration',
+  description: 'Plan a branded short drama with recurring characters, a consistent brand world and products that matter to the story. Start with a focused pilot.',
+  alternates: { canonical: '/branded-short-drama' },
+  openGraph: { title: 'Branded Short Drama Series | Moon Ocean Studio', description: 'A connected story world built around your brand and its products.', url: '/branded-short-drama' }
 };
-
-export default function Page(){return <main><section className="hero"><div className="container"><div className="eyebrow">Brand storytelling</div><h1>Branded Short Drama</h1><p className="lead">A branded short drama is built around a brand objective while still functioning as entertainment. Product integration is written into the scene so the ad feels like a story viewers chose to watch.</p><div className="actions"><Link className="btn primary" href="/contact">Pitch My Product</Link></div></div></section><section className="section"><div className="container"><h2>Best fit for</h2><div><span className="badge">Jewelry</span><span className="badge">Watches</span><span className="bade">Fashion</span><span className="badge">Beauty</span><span className="badge">Lifestyle</span><span className="bade">Ecommerce</span></div></div></section></main>}
+const faqs = [
+  { question: 'How is a branded series different from one drama ad?', answer: 'A standalone ad resolves one creative idea. A series can carry recurring characters and a shared world across episodes. Plan each episode’s product role and next action instead of repeating the same reveal.' },
+  { question: 'Can different products appear in the same series?', answer: 'Yes. Give each product a reason to matter in its episode, while keeping character references, brand tone and visual direction consistent. Review exact product details for each new item.' },
+  { question: 'Can dramatic stories still feel premium?', answer: 'They can be planned around restraint, gifting, confidence or a personal decision. Agree the language, emotional intensity, wardrobe, lighting and product presentation so the story matches the brand.' },
+  { question: 'Should I commission a full series immediately?', answer: 'A focused first pilot can test the story direction and production process before a larger commitment. Agree the deliverables and evaluation criteria first; expand when the creative and business evidence supports it.' }
+];
+export default function Page() {
+  return <main>
+    <section className="hero"><div className="container"><div className="eyebrow">Connected brand storytelling</div><h1>Branded Short Drama Series & Product Integration.</h1><p className="lead">A recurring cast. A world that feels like your brand. Products that affect what happens next. Start with one story, then build the series around what you learn.</p><div className="actions"><Link className="btn primary" href="/contact">Pitch My Product</Link><Link className="btn secondary" href="/examples">See Spec Concepts</Link></div></div></section>
+    <section className="section"><div className="container two-col"><div><h2>The brand lives inside the story.</h2></div><div className="editorial"><p>A branded short drama functions as entertainment while serving an agreed brand objective. The product can be a clue, a gift, a decision or the consequence of an action. Write that role before choosing its close-up.</p><p>For a standalone campaign, explore <Link href="/ai-drama-ads">AI drama ads</Link>. For connected episodes, define the shared world before producing multiple cuts.</p></div></div></section>
+    <section className="section"><div className="container"><h2>Define the series before multiplying episodes.</h2><div className="grid"><article className="card"><h3>Characters & continuity</h3><p>Approved faces, wardrobe and relationships give later episodes a foundation. Record what must stay consistent and what can change.</p></article><article className="card"><h3>Brand tone & product role</h3><p>Agree the visual style, language and emotional intensity. Each episode needs a specific product moment that fits the brand.</p></article><article className="card"><h3>Episode & campaign goals</h3><p>Decide what viewers should understand and do. Plan hooks and versions around the campaign rather than creating unrelated scenes.</p></article></div></div></section>
+    <section className="section"><div className="container two-col"><div><div className="eyebrow">Jewelry, watches & fashion</div><h2>Different products. One recognizable world.</h2></div><div className="editorial"><p>A jewelry series could explore gifts and personal choices. A watch story could follow a promise or deadline. A fashion series could use discovery and changing identity. These are concept directions to develop with the brand, not completed client campaigns.</p><p>Use the same approved creative foundation, then review each item’s details. <Link href="/ai-short-drama-ads">See how references, approvals and delivery fit together</Link>.</p></div></div></section>
+    <section className="section"><div className="container"><h2>Questions about a branded series.</h2><BuyerFAQ items={faqs} /><p className="editorial">Before commissioning: <Link href="/guides/ai-drama-ad-cost">define the quote and revision scope</Link> and <Link href="/guides/testing-short-drama-ads">agree how the pilot will be evaluated</Link>.</p></div></section>
+    <section className="section"><div className="container cta"><h2>Start with your product and audience.</h2><p className="lead">Tell us the brand, product and direction you want to explore.</p><div className="actions"><Link className="btn primary" href="/contact">Get 3 Free Drama Ideas</Link></div></div></section>
+  </main>;
+}
