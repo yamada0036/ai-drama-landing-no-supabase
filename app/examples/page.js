@@ -19,9 +19,11 @@ export default function Page(){
     </section>
     <section className="section">
       <div className="container">
-        <CaseGrid />
+        <CaseGrid showBreakdown />
+        <p className="editorial source-notes">These are spec concepts, not commissioned client campaigns or sales case studies. The notes explain the creative structure and what to review when adapting it to a real product.</p>
       </div>
     </section>
+    <section className="section"><div className="container two-col"><div><h2>What a product review should compare.</h2></div><div className="editorial"><p>For a commissioned ad, review the supplied product photos beside the proposed close-up and final scene. Check shape, color, stones, dial details, hardware and logos, as relevant to the item.</p><p>These concepts do not include a customer product-reference comparison. A recognizable story prop alone does not prove that a specific item has been reproduced accurately.</p><p>See the <Link href="/ai-short-drama-ads#brief">product brief and approval checklist</Link>, then define the <Link href="/guides/ai-drama-ad-cost">versions and revision scope</Link> in your quote.</p></div></div></section>
     <section className="section">
       <div className="container cta">
         <h2>Want your product in the story?</h2>

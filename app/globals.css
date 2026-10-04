@@ -55,6 +55,26 @@ textarea { min-height: 140px; resize: vertical; }
 .footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
 .badge { display: inline-block; padding: 7px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 13px; margin: 4px 6px 0 0; }
 form a { text-decoration: underline; text-underline-offset: 3px; }
+.editorial { max-width: 760px; }
+.editorial p { color: var(--muted); }
+.editorial a, .source-notes a { text-decoration: underline; text-underline-offset: 4px; }
+.workflow-list { display: grid; gap: 16px; }
+.buyer-faq { max-width: 860px; }
+.buyer-faq details { border-bottom: 1px solid var(--line); padding: 20px 0; }
+.buyer-faq summary { cursor: pointer; font-size: 18px; font-weight: 600; }
+.buyer-faq p { color: var(--muted); max-width: 760px; }
+.table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 16px; }
+.content-table { width: 100%; border-collapse: collapse; text-align: left; }
+.content-table caption { text-align: left; padding: 16px; color: var(--muted); }
+.content-table th, .content-table td { padding: 16px; border-top: 1px solid var(--line); vertical-align: top; min-width: 150px; }
+.content-table td { color: var(--muted); }
+.content-table thead { background: var(--panel); }
+.code-example { padding: 20px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow-x: auto; }
+.source-notes { margin-top: 28px; font-size: 14px; }
+.concept-notes { margin: 20px 0 0; border-top: 1px solid var(--line); padding-top: 16px; }
+.concept-notes dt { color: var(--text); font-weight: 600; margin-top: 14px; }
+.concept-notes dd { margin: 4px 0 0; color: var(--muted); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 @media (max-width: 800px) {
   .grid, .two-col, .hero-showcase { grid-template-columns: 1fr; }
   .featured-sample { width: min(100%,320px); margin: 0 auto; }
