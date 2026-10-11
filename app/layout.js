@@ -1,3 +1,4 @@
+import { socialImage } from '../lib/metadata';
 import './globals.css';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
@@ -13,8 +14,10 @@ export const metadata = {
     title: 'Moon Ocean Studio — AI Video Ads for Brands',
     description: 'Story-driven AI video advertising built for TikTok, Instagram Reels and YouTube Shorts.',
     type: 'website',
-    url: 'https://ai-drama-landing-no-supabase.vercel.app'
-  }
+    url: 'https://ai-drama-landing-no-supabase.vercel.app',
+    images: [socialImage]
+  },
+  twitter: { card: 'summary_large_image', images: [socialImage] }
 };
 
 export default function RootLayout({children}){

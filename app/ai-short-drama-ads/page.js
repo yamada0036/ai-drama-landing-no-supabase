@@ -1,12 +1,12 @@
+import { pageMetadata } from '../../lib/metadata';
 import Link from 'next/link';
 import BuyerFAQ from '../../components/BuyerFAQ';
 
-export const metadata = {
-  title: 'AI Short Drama Ad Production: Brief to Delivery',
-  description: 'How AI short drama ads are planned and produced: product references, script approval, character continuity, product checks and vertical video delivery.',
-  alternates: { canonical: '/ai-short-drama-ads' },
-  openGraph: { title: 'AI Short Drama Ad Production | Moon Ocean Studio', description: 'A practical workflow for product-led short drama creative.', url: '/ai-short-drama-ads' }
-};
+export const metadata = pageMetadata(
+  "/ai-short-drama-ads",
+  "AI Short Drama Ads for TikTok & Reels: How We Produce Them",
+  "How we make AI short drama ads for brands: script, AI production and vertical edits for TikTok, Reels and Shorts. See the process and timeline."
+);
 const stages = [
   ['1. Define the brief', 'Product photos or footage, the product URL, logo, audience, campaign goal, target platforms, budget and deadline. Identify the details the video must preserve.'],
   ['2. Approve the story', 'Choose one concept, then review the script, scene order and product role. Confirm where the product is visible and how the video leads to the next action.'],
@@ -23,7 +23,7 @@ const faqs = [
 ];
 export default function Page() {
   return <main>
-    <section className="hero"><div className="container"><div className="eyebrow">AI short drama production</div><h1>From Product Brief to Finished Short Drama Ad.</h1><p className="lead">Plan the story, approve the product moment and check the details before delivery. A clear scope keeps creative decisions and revisions manageable.</p><div className="actions"><Link className="btn primary" href="/contact">Send My Product</Link><Link className="btn secondary" href="/examples">Watch the Concepts</Link></div></div></section>
+    <section className="hero"><div className="container"><div className="eyebrow">AI short drama production</div><h1>AI Short Drama Ads for TikTok & Reels</h1><p className="lead">We produce AI short drama ads through a clear workflow: product brief, script approval, AI production and vertical edits. For TikTok AI drama ads, Reels and Shorts, agree the product moment, delivery versions and review milestones before production begins.</p><div className="actions"><Link className="btn primary" href="/contact">Send My Product</Link><Link className="btn secondary" href="/examples">Watch the Concepts</Link></div></div></section>
     <section className="section"><div className="container"><h2>The production workflow.</h2><div className="workflow-list">{stages.map(([title, body]) => <article className="card" key={title}><h3>{title}</h3><p>{body}</p></article>)}</div></div></section>
     <section className="section"><div className="container two-col"><div><div className="eyebrow">Product fidelity</div><h2>Keep the actual product recognizable.</h2></div><div className="editorial"><p>A generated scene can look convincing while changing the item you sell. Use real product imagery or footage when exact details matter, and review close-ups before approving the cut.</p><ul className="clean"><li>Jewelry: shape, stones, metal color, chain and clasp</li><li>Watches: dial, hands, markings, case and strap</li><li>Handbags: silhouette, hardware, texture and logo</li></ul><p>For mixed production, the environment can be generated while the product and logo are added from supplied assets. <a href="https://www.chipscat.com/en/blog/ai-video-with-real-products/" target="_blank" rel="noopener noreferrer">Read a studio’s explanation of the mixed workflow</a>.</p></div></div></section>
     <section id="brief" className="section"><div className="container"><h2>A brief you can copy.</h2><div className="card brief-template editorial"><p><strong>Product:</strong> Product URL, front/back/side photos, a close-up, logo files and a scale reference. List details that must not change.<br /><strong>Audience:</strong> Market, language and intended buyer.<br /><strong>Objective:</strong> Awareness, store visits or a purchase test. Name the primary outcome.<br /><strong>Story:</strong> Tone, product role, references and anything to avoid.<br /><strong>Delivery:</strong> Target runtime, platforms, aspect ratios, number of hooks, languages, captions and audio versions.<br /><strong>Scope:</strong> Budget ceiling, desired deadline, one approver, review rounds and intended usage.<br /><strong>Assets:</strong> Identify who supplies the product footage, music, voices and any licensed references.</p></div><p className="editorial">Copy these fields into <Link href="/contact">your product inquiry</Link>. The final deliverables, price and milestones are confirmed in the written quote.</p></div></section>

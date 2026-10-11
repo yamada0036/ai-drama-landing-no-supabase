@@ -1,25 +1,21 @@
+import { pageMetadata } from '../lib/metadata';
 import Link from 'next/link';
 import CaseGrid from '../components/CaseGrid';
 import SampleVideo from '../components/SampleVideo';
 
-export const metadata = {
-  title: 'AI Video Ads for Brands',
-  description: 'Story-driven AI video ads for brands, built for TikTok, Instagram Reels and YouTube Shorts.',
-  alternates: { canonical: '/' },
-  openGraph: {
-    title: 'AI Video Ads for Brands | Moon Ocean Studio',
-    description: 'Cinematic, story-driven AI video advertising for short-form platforms.',
-    url: '/'
-  }
-};
+export const metadata = pageMetadata(
+  "/",
+  "AI Drama Ads for Ecommerce Brands | Moon Ocean Studio",
+  "AI video ad agency making story-driven AI drama ads for jewelry, watch & fashion brands. Vertical ads for TikTok, Reels & Shorts. Get 3 free story ideas."
+);
 
 export default function Home(){
  return <main>
   <section className="hero"><div className="container hero-showcase">
    <div>
      <div className="eyebrow">AI video advertising · story-driven creative</div>
-     <h1>AI Video Ads for Brands That People Want to Keep Watching.</h1>
-     <p className="lead">We create cinematic AI video ads for ecommerce, jewelry, fashion and lifestyle brands — built for TikTok, Instagram Reels and YouTube Shorts.</p>
+     <h1>AI Drama Ads for Ecommerce Brands</h1>
+     <p className="lead">Moon Ocean Studio is an AI video ad agency creating AI drama ads for ecommerce brands. We build story-driven AI video ads for ecommerce products, including jewelry, watches and fashion, for TikTok, Reels and Shorts.</p>
      <div className="actions">
        <Link className="btn primary" href="/contact">Get 3 Free Story Ideas</Link>
        <Link className="btn secondary" href="/examples">Watch All 3 Examples</Link>
@@ -34,19 +30,20 @@ export default function Home(){
   <section className="section"><div className="container two-col">
     <div>
       <div className="eyebrow">A story-first format</div>
-      <h2>Turn the product into part of the story.</h2>
+      <h2>Story-Based Ads Where the Product Is the Plot</h2>
     </div>
     <div>
       <p className="lead">Instead of interrupting viewers with a product demo, we build the product into the hook, conflict, reveal or payoff.</p>
-      <p>One of our core formats is <Link href="/ai-drama-ads"><strong>AI Drama Ads</strong></Link> — short narrative ads where the product plays a real role in the plot.</p>
+      <p>One of our core formats is <Link href="/ai-drama-ads"><strong>AI jewelry video ads</strong></Link> — short narrative ads where the product plays a real role in the plot.</p>
     </div>
   </div></section>
 
   <section className="section"><div className="container">
     <div className="eyebrow">The work, in motion</div>
-    <h2>Watch three short drama concepts.</h2>
+    <h2>AI Video Ads for Jewelry, Watches & Fashion</h2>
     <p className="lead">20-second vertical stories with a hook, a turn and a reveal.</p>
     <CaseGrid />
+    <p className="editorial">Explore <Link href="/examples">AI-generated video ad examples</Link>, our <Link href="/ai-short-drama-ads">AI short drama ads</Link> production process and <Link href="/branded-short-drama">story-based ads</Link> for connected series.</p>
   </div></section>
 
   <section className="section"><div className="container two-col">
