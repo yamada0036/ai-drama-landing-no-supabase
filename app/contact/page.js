@@ -1,10 +1,11 @@
+import { pageMetadata } from '../../lib/metadata';
 import ContactForm from '../../components/ContactForm';
 
-export const metadata = {
-  title:'Contact',
-  description:'Send your product and get three AI drama ad concepts from Moon Ocean Studio.',
-  alternates:{ canonical:'/contact' }
-};
+export const metadata = pageMetadata(
+  '/contact',
+  'Get 3 Free AI Drama Ad Ideas | Moon Ocean Studio',
+  'Send your product and get three AI drama ad concepts from Moon Ocean Studio.'
+);
 
 export default function Page(){
   return <main>
