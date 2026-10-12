@@ -1,8 +1,19 @@
+const lastModified = {
+  '': '2026-10-12',
+  '/ai-drama-ads': '2026-10-11',
+  '/ai-short-drama-ads': '2026-10-11',
+  '/branded-short-drama': '2026-10-11',
+  '/examples': '2026-10-12',
+  '/contact': '2026-10-12',
+  '/guides/ai-drama-ad-cost': '2026-10-11',
+  '/guides/testing-short-drama-ads': '2026-10-12'
+};
+
 export default function sitemap(){
  const base='https://ai-drama-landing-no-supabase.vercel.app';
- return ['', '/ai-drama-ads','/ai-short-drama-ads','/branded-short-drama','/examples','/contact','/guides/ai-drama-ad-cost','/guides/testing-short-drama-ads'].map(path=>({
+ return Object.keys(lastModified).map(path=>({
    url:base+path,
-   lastModified:new Date(),
+   lastModified:new Date(lastModified[path]),
    changeFrequency:path===''?'weekly':'monthly',
    priority:path===''?1:.8
  }));

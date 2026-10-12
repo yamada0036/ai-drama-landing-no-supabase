@@ -44,6 +44,7 @@ export default function Home(){
     <p className="lead">20-second vertical stories with a hook, a turn and a reveal.</p>
     <CaseGrid />
     <p className="editorial">Explore <Link href="/examples">AI-generated video ad examples</Link>, our <Link href="/ai-short-drama-ads">AI short drama ads</Link> production process and <Link href="/branded-short-drama">story-based ads</Link> for connected series.</p>
+    <p className="editorial">Planning a budget? Read <Link href="/guides/ai-drama-ad-cost">AI drama ad cost and pricing</Link>, then see <Link href="/guides/testing-short-drama-ads">how to test short drama ads vs UGC ads</Link>.</p>
   </div></section>
 
   <section className="section"><div className="container two-col">
