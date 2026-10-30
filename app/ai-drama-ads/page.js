@@ -5,7 +5,7 @@ import BuyerFAQ from '../../components/BuyerFAQ';
 
 export const metadata = pageMetadata(
   "/ai-drama-ads",
-  "AI Jewelry & Watch Video Ads | TikTok AI Drama Ads",
+  "AI Jewelry & Watch Drama Ads | Moon Ocean Studio",
   "Done-for-you AI drama ads for jewelry and watch brands. Short story-driven video ads built for TikTok, Reels and Shorts, from brief to delivery."
 );
 const faqs = [
