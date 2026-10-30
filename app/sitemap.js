@@ -1,8 +1,8 @@
 const lastModified = {
   '': '2026-10-12',
-  '/ai-drama-ads': '2026-10-11',
-  '/ai-short-drama-ads': '2026-10-11',
-  '/branded-short-drama': '2026-10-11',
+  '/ai-drama-ads': '2026-10-30',
+  '/ai-short-drama-ads': '2026-10-30',
+  '/branded-short-drama': '2026-10-30',
   '/examples': '2026-10-12',
   '/contact': '2026-10-12',
   '/guides/ai-drama-ad-cost': '2026-10-11',
