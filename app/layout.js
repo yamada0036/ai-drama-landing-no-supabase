@@ -1,10 +1,11 @@
 import { socialImage } from '../lib/metadata';
+import { SITE } from '../lib/site';
 import './globals.css';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  metadataBase: new URL('https://ai-drama-landing-no-supabase.vercel.app'),
+  metadataBase: new URL(SITE),
   title: {
     default: 'Moon Ocean Studio | AI Video Ads for Brands',
     template: '%s | Moon Ocean Studio'
@@ -14,7 +15,7 @@ export const metadata = {
     title: 'Moon Ocean Studio — AI Video Ads for Brands',
     description: 'Story-driven AI video advertising built for TikTok, Instagram Reels and YouTube Shorts.',
     type: 'website',
-    url: 'https://ai-drama-landing-no-supabase.vercel.app',
+    url: SITE,
     images: [socialImage]
   },
   twitter: { card: 'summary_large_image', images: [socialImage] }
@@ -25,7 +26,7 @@ export default function RootLayout({children}){
     '@context':'https://schema.org',
     '@type':'Organization',
     name:'Moon Ocean Studio',
-    url:'https://ai-drama-landing-no-supabase.vercel.app',
+    url: SITE,
     description:'Story-driven AI video advertising and branded short-form creative for brands.'
   };
   return <html lang="en"><body><Nav />{children}<Footer />
