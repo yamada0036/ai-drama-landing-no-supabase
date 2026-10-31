@@ -78,6 +78,42 @@ export default function Page() {
     </div></section>
 
     <section className="section"><div className="container two-col">
+      <div><h2>Hook rules for the first two seconds.</h2></div>
+      <div className="editorial">
+        <p>Most viewers stop around 0:02. Treat that as a writing constraint, not as a performance case study for any film on this site. Open on the conflict or an identity reveal: she is fired, he is not the driver, the prenup is already on the table.</p>
+        <p>Do not open on a logo, a slow packshot, or a title card. The product can be in that first frame when it is part of the conflict. A spinning SKU with music is not a hook.</p>
+      </div>
+    </div></section>
+
+    <section className="section"><div className="container">
+      <h2>Search-led story templates.</h2>
+      <p className="lead">These themes show up in TikTok search around short drama. They are patterns for an original brand scene. They are not our campaign results, and they are not permission to copy a named series.</p>
+      <div className="grid">
+        <article className="card">
+          <h3>Female boss fires an employee</h3>
+          <p>Office drama. Hook: the firing line, or the employee who already knows, in the first two seconds.</p>
+          <p><Link href="/contact">Request 3 free story angles</Link></p>
+        </article>
+        <article className="card">
+          <h3>She thought the CEO was the driver</h3>
+          <p>Mistaken identity: a billionaire taken for the driver, or a delivery guy and a rich lead. Hook: say the mistake out loud before any reveal.</p>
+          <p><Link href="/contact">Request 3 free story angles</Link></p>
+        </article>
+        <article className="card">
+          <h3>The prenup backfired</h3>
+          <p>Divorced heiress, a prenup that turns, divorce revenge. Hook: the clause or the demand, not a jewelry spin. <Link href="/watch/the-ring-reveal">The Ring Reveal</Link> is a divorce-shaped spec, not this trope’s case study.</p>
+          <p><Link href="/contact">Request 3 free story angles</Link></p>
+        </article>
+        <article className="card">
+          <h3>AI drama, episode 1 to 40</h3>
+          <p>People search for episode lists. A brand pilot is one episode. A 40-episode run is a series scope, not a prompt. See <Link href="/ai-short-drama">AI short drama from a script</Link> and <Link href="/ai-drama-generator">what a generator does not finish</Link>.</p>
+          <p><Link href="/contact">Request 3 free story angles</Link></p>
+        </article>
+      </div>
+      <p className="editorial">Use the mechanism only if it fits the product and the offer. A status mix-up is not a media plan. Test design stays on <Link href="/guides/testing-short-drama-ads">testing short drama ads vs UGC</Link>. A real multi-episode plan starts at <Link href="/branded-short-drama">branded short drama</Link>.</p>
+    </div></section>
+
+    <section className="section"><div className="container two-col">
       <div><h2>Attention is not a purchase.</h2></div>
       <div className="editorial">
         <p>Opening retention and watch time tell you whether the story holds. Outbound clicks and attributed orders answer different questions. Define the primary metric and the review window before you spend.</p>
