@@ -22,7 +22,7 @@ a { color: inherit; text-decoration: none; }
   background: rgba(10,10,10,.88); backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
-.nav-inner { height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.nav-inner { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 10px 0; }
 .brand { font-weight: 800; letter-spacing: -.02em; }
 .nav-links { display: flex; gap: 18px; color: var(--muted); font-size: 14px; flex-wrap: wrap; justify-content: flex-end; }
 .hero { padding: 96px 0 56px; }
@@ -47,7 +47,8 @@ h3 { margin: 0 0 8px; }
 .kicker { font-size: 14px; color: var(--accent); font-weight: 700; }
 .case-video { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; border-radius: 18px; border: 1px solid var(--line); margin-bottom: 18px; background:#0d0e10; }
 .two-col { display: grid; grid-template-columns: 1.05fr .95fr; gap: 34px; align-items: start; }
-ul.clean { padding-left: 20px; color: var(--muted); }
+ul.clean, ol.clean { padding-left: 20px; color: var(--muted); }
+ol.clean li + li { margin-top: 8px; }
 .cta { background: #131416; border: 1px solid var(--line); border-radius: 26px; padding: 36px; }
 form { display: grid; gap: 14px; }
 input, textarea, select { width: 100%; background: #0f1012; color: var(--text); border: 1px solid #2b2d31; border-radius: 12px; padding: 13px 14px; font: inherit; }
@@ -74,9 +75,14 @@ form a { text-decoration: underline; text-underline-offset: 3px; }
 .concept-notes { margin: 20px 0 0; border-top: 1px solid var(--line); padding-top: 16px; }
 .concept-notes dt { color: var(--text); font-weight: 600; margin-top: 14px; }
 .concept-notes dd { margin: 4px 0 0; color: var(--muted); }
+.card a, .featured-sample figcaption a, .watch-meta a { text-decoration: underline; text-underline-offset: 3px; }
+.watch-layout { display: grid; grid-template-columns: minmax(240px, 360px) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
+.watch-player { display: block; width: 100%; aspect-ratio: 9/16; object-fit: cover; border-radius: 22px; border: 1px solid var(--line); background: #0d0e10; }
+.watch-meta { color: var(--muted); font-size: 14px; margin: 10px 0 0; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 @media (max-width: 800px) {
-  .grid, .two-col, .hero-showcase { grid-template-columns: 1fr; }
+  .grid, .two-col, .hero-showcase, .watch-layout { grid-template-columns: 1fr; }
+  .watch-player-wrap { width: min(100%, 360px); }
   .featured-sample { width: min(100%,320px); margin: 0 auto; }
   .nav-links { display: none; }
   .hero { padding-top: 68px; }
